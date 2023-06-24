@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 
-import styles from "./welcome.style";
 import { icons } from "../../../constants";
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
@@ -58,13 +57,15 @@ const Welcome = () => {
           data={jobTypes}
           renderItem={({ item }) => (
             <TouchableOpacity
-              className="py-1 px-2.5 rounded-2xl border"
-              style={styles.tab(activeJobType, item)}
+              className={`py-1 px-2.5 rounded-2xl border ${
+                activeJobType === item ? "border-gray-700" : "border-gray-300"
+              }`}
               onPress={handlePress(item)}
             >
               <Text
-                className="font-medium"
-                style={styles.tabText(activeJobType, item)}
+                className={`font-medium text-base ${
+                  activeJobType === item ? "text-gray-700" : "text-gray-300"
+                }`}
               >
                 {item}
               </Text>
