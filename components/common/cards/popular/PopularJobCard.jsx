@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
-import styles from "./popularjobcard.style";
-
 import { checkImageURL } from "../../../../utils";
 
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
@@ -10,7 +8,7 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
     <TouchableOpacity
       className={`w-64 p-6 ${
         selectedJob === item.job_id ? "bg-indigo-900" : "bg-white"
-      } rounded-xl space-y-4 shadow-2xl`}
+      } rounded-xl space-y-4`}
       onPress={() => handleCardPress(item)}
     >
       <TouchableOpacity

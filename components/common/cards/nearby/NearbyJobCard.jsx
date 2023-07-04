@@ -1,12 +1,10 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
-
-import styles from "./nearbyjobcard.style";
 import { checkImageURL } from "../../../../utils";
 
 const NearbyJobCard = ({ job, handleNavigate }) => {
   return (
     <TouchableOpacity
-      className="flex flex-row justify-between items-center p-4 bg-white shadow-lg rounded-2xl"
+      className="flex-1 flex-row justify-between items-center p-4 bg-white shadow-lg rounded-2xl"
       onPress={handleNavigate}
     >
       <TouchableOpacity className="w-12 h-12 bg-gray-100 rounded-xl justify-center items-center">
@@ -21,7 +19,7 @@ const NearbyJobCard = ({ job, handleNavigate }) => {
         />
       </TouchableOpacity>
 
-      <View className="flex mx-4">
+      <View className="flex-1 mx-4">
         <Text className="text-base font-bold text-indigo-900" numberOfLines={1}>
           {job?.job_title}
         </Text>
