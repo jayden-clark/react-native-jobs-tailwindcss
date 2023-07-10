@@ -7,7 +7,11 @@ module.exports = {
       medium: ["DM Medium"],
       bold: ["DM Bold"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "custom-lightgray": "#FAFAFC",
+      },
+    },
   },
   plugins: [],
 };
