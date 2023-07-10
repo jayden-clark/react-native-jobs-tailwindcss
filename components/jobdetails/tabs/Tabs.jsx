@@ -1,8 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { TouchableOpacity, FlatList, Text, View } from "react-native";
-
-import styles from "./tabs.style";
-import { SIZES } from "../../../constants";
 
 function TabButton({ name, activeTab, onHandleSearchType }) {
   return (
@@ -37,7 +34,7 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
             onHandleSearchType={() => setActiveTab(item)}
           />
         )}
-        contentContainerStyle={{ columnGap: SIZES.small / 2 }}
+        contentContainerStyle={{ columnGap: 6 }}
         keyExtractor={(item) => item}
       />
     </View>
